@@ -4,9 +4,9 @@ import logging
 parser = argparse.ArgumentParser()
 parser.add_argument('--just_val', type=bool, default=False)
 parser.add_argument('--running_time', type=bool, default=False) #                                                     
-parser.add_argument('--lr', type=float, nargs='+', default=[6e-6, 5e-3, 8e-4, 3e-3, 4e-4]) # [8e-4, 3e-4, 8e-4, 3e-3, 4e-4]
+parser.add_argument('--lr', type=float, nargs='+', default=[6e-6, 5e-3]) # [8e-4, 3e-4, 8e-4, 3e-3, 4e-4] for xmedia
 parser.add_argument('--lr_SPL', type=float, default=5e-4)
-parser.add_argument('--wselect', type=bool, default=False)
+parser.add_argument('--wselect', type=bool, default=True)
 parser.add_argument('--batch_size', type=int, default=1024)
 parser.add_argument('--output_shape', type=int, default=2048)
 parser.add_argument('--alpha', type=float, default=0.1) # discrimination_loss
