@@ -9,7 +9,6 @@ def calc_label_sim(label_1, label_2):
 
 def discrimination_loss(x, y, alpha, beta):
     cos = lambda x, y: x.mm(y.t()) / ((x ** 2).sum(1, keepdim=True).sqrt().mm((y ** 2).sum(1, keepdim=True).sqrt().t())).clamp(min=1e-6) * 2.
-    # sim = 1 - cos(x, y)
 
     theta12 = cos(x, y)
     theta11 = cos(x, x)
@@ -44,7 +43,6 @@ class LossModule(torch.nn.Module):
         self.eta = eta
         self.gamma = gamma
     def forward(self, features, labels, predicts, epoch):
-        features, labels = feature_augmentation(features, labels, self.gamma)
         label_features = torch.mm(labels, self.L)
         term1 = discrimination_loss(label_features, features, self.alpha, self.beta)
         q = min(1., 0.01 * epoch)
