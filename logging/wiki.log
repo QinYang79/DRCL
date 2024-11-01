@@ -1,0 +1,2 @@
+2024-11-01 16:37:52,299 - __main__ - INFO - Namespace(just_val=False, running_time=False, lr=[6e-06, 0.005], lr_SPL=0.0005, wselect=True, batch_size=1024, output_shape=2048, alpha=0.1, beta=0.1, eta=1, gamma=0.9, datasets='wiki', view_id=-1, gpu_id=0, sample_interval=1, epochs=200, seed=1)
+2024-11-01 16:38:08,444 - __main__ - INFO - Namespace(alpha=0.1, batch_size=1024, beta=0.1, datasets='wiki', epochs=200, eta=1, gamma=0.9, gpu_id=0, just_val=False, lr=[6e-06, 0.005], lr_SPL=0.0005, output_shape=2048, running_time=False, sample_interval=1, seed=1, view_id=-1, wselect=True)
