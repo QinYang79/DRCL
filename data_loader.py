@@ -1,17 +1,6 @@
 import scipy.io as sio
 import h5py
 import numpy as np
-import torchvision.models as models
-import torchvision.transforms as transforms
-from PIL import Image
-import torch
-from pycocotools.coco import COCO
-import torch.nn.functional as F
-import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
-from sklearn.preprocessing import normalize
-import h5py
-import os
 
 
 def load_deep_features(data_name):

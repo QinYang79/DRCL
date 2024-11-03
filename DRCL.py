@@ -5,12 +5,8 @@ import cal_utils as utils
 import torch.nn.functional as F
 import data_loader
 import scipy.io as sio
-import copy
-from loss import gce_loss, LossModule
+from loss import gce_loss, LossModule, feature_augmentation
 import time
-import cal_utils as utils
-from loss import feature_augmentation
-
 class Solver(object):
     def __init__(self, config, logger):
         self.logger = logger
